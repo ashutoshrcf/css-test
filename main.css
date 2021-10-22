@@ -1,0 +1,373 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smooth: antialiased;
+  -moz-font-smooth: antialiased;
+  -o-font-smooth: antialiased;
+  font-smooth: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #000000;
+  background: #f8f9f9;
+}
+
+body p {
+  color: #4a4f54;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  top: 2vh;
+}
+
+#user-validation > p {
+  margin: 1em 0 0.5em 0;
+  font-weight: 600;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 26px;
+  text-align: center;
+}
+
+#dpa-form input[type="text"],
+#dpa-form input[type="email"],
+#dpa-form input[type="tel"],
+#dpa-form input[type="url"],
+#dpa-form button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#dpa-form {
+  background: #e9ecec;
+  padding: 0px 10px 10px 10px;
+  margin: auto;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.inputField {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+  position: relative;
+}
+
+.vinInfoTool {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+}
+
+.inputField label.error {
+  color: #ff0000;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: -15px;
+  font-weight: normal;
+  font-size: 11px;
+}
+
+.inputField:nth-of-type(1) {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.inputField:nth-of-type(1) > div:nth-child(1) {
+  /* margin-right: 2%; */
+  flex: 1;
+  width: 100%;
+}
+
+.inputField:nth-of-type(1) > div:nth-child(2) {
+  flex: 1;
+  margin-left: 2%;
+  width: 100%;
+}
+
+.inputField:nth-of-type(5) {
+  /* display: flex;
+  justify-content: space-between;
+  flex-direction: row; */
+}
+/* 
+.inputField:nth-of-type(5) > div:nth-child(1) {
+  margin-right: 2%;
+  width: 100%;
+}
+
+.inputField:nth-of-type(5) > div:nth-child(2) {
+  margin-left: 2%;
+  width: 100%;
+} */
+
+#dpa-form input[type="text"],
+#dpa-form input[type="email"],
+#dpa-form input[type="tel"],
+#dpa-form input[type="url"],
+#dpa-form textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#dpa-form input[type="text"]:hover,
+#dpa-form input[type="email"]:hover,
+#dpa-form input[type="tel"]:hover,
+#dpa-form input[type="url"]:hover,
+#dpa-form textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  /*border: 1px solid #aaa;*/
+}
+
+#dpa-form-submit {
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background: #0c121c;
+  color: #fff;
+  margin: 0 0 5px;
+  padding: 7px 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#dpa-form-submit:hover {
+  background: #fff;
+  color: #0c121c;
+  border: 1px solid #0c121c;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#dpa-form-submit:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#dpa-form-submit:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+input:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+.privacy-policy {
+  text-align: center;
+}
+
+.privacy-policy a {
+  text-decoration: none;
+}
+
+#dpa-form input:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+#vin-input,
+#postcode-input {
+  text-transform: uppercase;
+}
+
+#email-input {
+  text-transform: lowercase;
+}
+
+#line1-input,
+#fname-input,
+#lname-input {
+  text-transform: capitalize;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  text-transform: none;
+  color: #888;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  text-transform: none;
+  color: #888;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  text-transform: none;
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  text-transform: none;
+  color: #888;
+}
+.logo {
+  display: block;
+  margin: auto;
+  padding-bottom: 5px;
+}
+
+/* New By Mohan */
+#dpa-form {
+  background: rgba(245, 245, 245, 0.37);
+  border-radius: 7px;
+  padding: 5px 25px 15px;
+  overflow-x: hidden;
+}
+
+#dpa-form input[type="text"],
+#dpa-form input[type="email"],
+#dpa-form input[type="tel"],
+#dpa-form input[type="url"],
+#dpa-form textarea {
+  height: 28px;
+  padding: 2px 5px 1px 3px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  box-shadow: none;
+  background: transparent;
+  letter-spacing: 0.6px;
+}
+
+#dpa-form .inputField {
+  margin: 0 0 15px;
+}
+
+/* Checkbox */
+.checkbox-Wrap {
+  margin-bottom: 5px;
+  line-height: normal;
+}
+
+.checkbox-Wrap span {
+  display: inline-block;
+  width: 90%;
+}
+
+.checkbox-Wrap .checkboxs {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.checkbox-Wrap input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkbox-Wrap .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border-radius: 2px;
+  background-color: #f0f0f0;
+  border: 1px solid rgb(12 18 28 / 50%);
+}
+
+.checkbox-Wrap .checkboxs:hover input ~ .checkmark {
+  border-color: #0c121c;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-Wrap input:checked ~ .checkmark {
+  background-color: #0c121c;
+}
+
+.checkbox-Wrap .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-Wrap input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-Wrap .checkmark:after {
+  left: 2px;
+  content: "\f00c";
+  top: 0px;
+  font-family: fontawesome;
+  color: #fff;
+}
+
+/* Tooltip container */
+
+/* Tooltip text */
+.vinInfoTool .tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  margin-bottom: 8px;
+  left: 50%;
+  margin-left: -75px;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 11px;
+}
+
+.vinInfoTool .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.vinInfoTool:hover .tooltiptext {
+  visibility: visible;
+}

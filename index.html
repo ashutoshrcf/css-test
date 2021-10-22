@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Validation</title>
+    <!-- <link rel="stylesheet" type="text/css" href="/main.css" /> -->
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://kit.fontawesome.com/fa9c3f982a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form id="dpa-form" method="POST">
+
+            <input type="hidden" id="hidden-id" name="convId" value="%=convId %" />
+            <img src="./images/landrover-logo.png" alt="logo" width="150" height="80" class="logo">
+            <div class="inputField">
+                <div style="position: relative;">
+                    <input placeholder="First Name" type="text" name="firstName" id="fname-input" />
+                </div>
+                <div style="position: relative;">
+                    <input placeholder="Last Name" type="text" name="lastName" id="lname-input" />
+                </div>
+            </div>
+
+            <div class="inputField">
+                <input placeholder="Your full VIN" type="text" name="fullVin" id="vin-input" />
+                <i class="vinInfoTool fa fa-info-circle" aria-hidden="true">
+                    <span class="tooltiptext">Sample VIN - SAL12121256341212</span>
+                </i>
+            </div>
+
+            <div class="inputField">
+                <input placeholder="Email Address" type="email" name="emailAddress" id="email-input" />
+            </div>
+            <div class="inputField">
+                <input placeholder="Phone Number" type="text" name="phoneNumber" required />
+            </div>
+            <div class="inputField">
+                <div>
+                    <input placeholder="First line of address" type="text" name="addressLine1" id="line1-input" />
+                </div>
+            </div>
+            <div class="inputField">
+                <div>
+                    <input placeholder="Postcode" type="text" name="addressPostcode" id="postcode-input" />
+                </div>
+            </div>
+            <div class="inputField">
+                <div class="checkbox-Wrap">
+                    <label class="checkboxs">
+                        <span>I agree to submit my personal information to Jaguar Land Rover for processing
+                            purpose.</span>
+                        <input type="checkbox" id="consent" name="consent">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <input type="button" value="Submit" id="dpa-form-submit" />
+            </div>
+            <p class="privacy-policy" style="margin: -10px 0 0;">
+                To know more about our privacy policy
+                <a href="https://www.jaguarlandrover.com/privacy" target="_blank" title="Privacy Policy">click here</a>
+            </p>
+        </form>
+    </div>
+
+    <div id="successMessage" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <p>Details has been submitted successfully. Please click on <i class="fa fa-angle-right"
+                            aria-hidden="true"></i>
+                        this icon to close the window. </p>
+                    <div class="text-right">
+                        <button style="background: #9E1B32;color:#fff;" type="button" class="btn btn-default"
+                            data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</body>
+
+</html>
